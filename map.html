@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> JavaScript Map </title>
+    </head>
+    <body>
+        <h1> Example 1 </h1>
+        <script>
+            const map1 = new Map();
+            map1.set('a', 1);
+            map1.set('b', 2);
+            map1.set('c', 3);
+            
+            document.write(map1.get('a'));                  // Expected output: 1
+            document.write("<br>"); 
+            map1.set('a', 97);
+            document.write(map1.get('a'));                  // Expected output: 97
+            document.write("<br>"); 
+            document.write(map1.size);                      // Expected output: 3
+            document.write("<br>");
+            map1.delete('b');
+            document.write(map1.size);                      // Expected output: 2
+        </script>
+
+        <br>
+        <br>
+        <br> 
+        <br>
+                
+        <h1> Example 2 </h1>
+        <script>
+            let recipeMap = new Map([
+                ['cucumber', 500],
+                ['tomatoes', 350],
+                ['onion',    50]
+            ]);
+
+            // iterate over keys (vegetables)
+            for (let vegetable of recipeMap.keys()) {
+                document.write(vegetable);               // cucumber, tomatoes, onion
+                document.write("<br>");               
+            }
+             
+            document.write("<br>");
+            // iterate over values (amounts)
+            for (let amount of recipeMap.values()) {
+                document.write(amount);                        // 500, 350, 50
+                document.write("<br>");               
+            }
+
+            document.write("<br>");
+            // iterate over [key, value] entries
+            for (let entry of recipeMap) {              // the same as of recipeMap.entries()
+                document.write(entry);                         // cucumber,500 (and so on)
+                document.write("<br>");
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Strictly Equality Operator </title>
+    </head>
+    <body>
+        <script>
+            console.log(2 === 2);   //output: true, because 2 and 2 have the same data type and value
+
+            console.log(2 === '2');    //output: false, because the === operator doesn't do the type conversion and the data types of both operands are different.
+
+            console.log(false === false);    //output: true, as the operands have the same data type and value.
+
+            console.log( false === 0 );     //output: false, as the === operator doesn't do the type conversion and the data types of both operands are different.
+
+            let student1 = {
+                name: 'John',
+                class: 10
+            }
+
+            let student2 = {
+                name: 'John',
+                class: 10   
+            }
+
+            let student3 = {
+                name: 'Peter',
+                class: 10
+            }
+
+            console.log(student1 === student1);      //output: true, as both the operands refer to the same object.
+
+            console.log(student1 === student2);      //output: false, as student1 and student2 refer to different objects.  
+
+            console.log(student1 === student3);     //output: false, as student1 and student3 refer to different objects.
+        </script>
+    
+    </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> The Arguments Object </title>
+    </head>
+    <body>
+        <h2> Example One(with string) </h2>
+        <script>
+            function display(name1, name2){
+                arguments[0] = "Namaste";
+                document.write(arguments[0] + " ");        // Expected output: Namaste 
+                document.write(arguments[1]);              // Expected output: India
+            }
+            display("Hello","India");
+        </script>
+
+        <br>
+        <br>
+
+        <h2> Example Two(with numbers) </h2>
+        <script>
+            function numbers(a, b, c) {
+                document.write(arguments[0]);             // Expected output: 1
+                document.write("<br>");
+                document.write(arguments[1]);             // Expected output: 2
+                document.write("<br>");
+                document.write(arguments[2]);              // Expected output: 3
+            }
+            numbers(1, 2, 3);
+        </script>
+    
+        <br>
+        <br>
+
+        <h2> Example Three(for loop and length property) </h2>
+        <script>
+            function print(){
+                for(var i=0; i<arguments.length;i++){               // length property same as array property.
+                    document.write(arguments[i] + " ");             // Don't be sleepy Namaste India.
+                }
+            }
+            print("Don't", "be", "sleepy", "Namaste", "India.");  
+        </script>
+
+        <br>
+        <br>
+
+        <h2> Example Four(with default value) </h2>
+        <script>
+            function function_with_default(num1 = 55) {
+                arguments[0] = 99;                                  // updating arguments[0] does not also update num1
+                document.write(num1);                               // 10
+                document.write("<br>");
+            }
+            function_with_default(10); 
+
+            function function_with_default2(num2 = 55) {
+                num2 = 99;                                           // updating num2 does not also update arguments[0]
+                document.write(arguments[0]);                        // 10
+                document.write("<br>");            
+            }
+            function_with_default2(10); 
+
+            // An untracked default parameter
+            function function_with_default3(num3 = 55) {
+                document.write(arguments[0]);                        // undefined
+                document.write("<br>");
+                document.write(arguments.length);                    // 0
+            }
+            function_with_default3(); 
+        </script>
+
+        <br>
+        <br>
+
+        <h2> Example Five(callee property) </h2>
+        <script>
+            function callee_property(name1, num, name2){
+                document.write(arguments.callee);
+            }
+            callee_property("Anubhav", 0, "Jain");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Immediately Invoked Function Expression </title>
+    </head>
+    <body>
+        <h2> Example One(IIFE Function) </h2>
+        <script>
+            (function() {
+                document.write("Welcome to Meerut");
+            })();
+        </script>
+
+        <br>
+        <br>
+
+        <h2> Example Two(Using Date object as parameter) </h2>
+        <script>
+        (function(dt) {
+            document.write(dt.toLocaleTimeString());            // Passing the Parameter.
+        })(new Date());
+        </script>
+
+        <br>
+        <br>
+
+        <h2> Example Three(iife inside function) </h2>
+        <script>
+            function my_function()
+            {
+                document.write("Welcome to" + " ");            
+                // This will be executed after executing the previous log.
+                (function() { document.write("Meerut" + " "); })();
+                document.write("Hi There!");
+            }
+            my_function();                                     // Calling the Function.
+        </script>
+    </body>
+</html>
