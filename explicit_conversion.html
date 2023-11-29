@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Explicit Type Conversion </title>
+    </head>
+    <body>
+        <h2>Number Type Conversion</h2>  
+        <script type="text/javascript">  
+            var num1 = '30';  
+            document.write(Number(num1));  
+            document.write("<br>");  
+            document.write("The type of num1 is :"+typeof(Number(num1)));  
+            document.write("<br>");  
+        </script>  
+
+        <h2>Boolean Type Conversion</h2>  
+        <script type="text/javascript">   
+            document.write(Boolean("hello"));  
+            document.write("<br>");  
+            document.write("The type is :"+typeof(Boolean("hello")));  
+            document.write("<br>");  
+            //There is no value it will returns fasle  
+            document.write(Boolean(""));  
+            document.write("<br>");  
+            document.write("The type is :"+typeof(Boolean("")));  
+            document.write("<br>");  
+        </script>  
+
+        <h2>ParseInt Type conversion</h2>  
+        <script>  
+            document.write ("The integer type is :"+parseInt (24.89));  
+            document.write("<br>");   
+        </script> 
+
+        <h2>tostring Type conversion</h2>  
+        <script type="text/javascript">  
+            var num2 = 30;  
+            var num3;  
+            num3=num2.toString(2);              //Converts binary  
+            document.write(num3);  
+            document.write("<br>");  
+            document.write("The type of num3 is :"+typeof(num3));  
+            document.write("<br>");  
+            num3=num2.toString(8);             //Converts octal  
+            document.write(num3);  
+            document.write("<br>");  
+            document.write("The type of num3 is :"+typeof(num3));  
+            document.write("<br>");  
+        </script> 
+    </body>
+</html>

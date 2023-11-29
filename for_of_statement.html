@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Loop using for..of statement </title>
+    </head>
+    <body>
+        <script>
+            const iterable = [10, 20, 30];
+            for (let value of iterable) {
+                value += 1;
+                console.log(value);
+            }
+        </script>
+
+
+        <script>
+            console.log("Iterating over a map using for..of statement");
+            const sequence = new Map([
+                ["a", 1],
+                ["b", 2],
+                ["c", 3],
+            ]);
+
+            for (const entry of sequence) {
+                console.log(entry);
+            }
+
+            for (const [key, value] of sequence) {
+                console.log(value);
+            }
+        </script>
+    </body>
+</html>

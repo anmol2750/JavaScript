@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> var keyword </title>
+    </head>
+    <body>
+        <h1>JavaScript Variables</h1>
+
+        <p> If you re-declare and not initialize a JavaScript variable, it will not lose its value.</p>
+        <p id="demo"></p>
+        <script>
+            var car_name = "Volvo";
+            var car_name;
+            document.getElementById("demo").innerHTML = car_name;
+        </script>
+
+        <p>If you re-declare a JavaScript variable and initialize it, it will take a new value.</p>
+        <p id="temp"></p>
+        <script>
+            var car__name = "Volvo";
+            var car__name = "Creta";
+            document.getElementById("temp").innerHTML = car__name;
+        </script>
+    </body>
+</html>

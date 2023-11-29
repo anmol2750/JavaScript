@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Implicit Type Conversion </title>
+    </head>
+    <body>
+        <h2>Implicit Type Conversions </h2>  
+        <script type="text/javascript">  
+            document.write(10 + "5"); // string  
+            document.write("<br>");  
+            document.write("The type is:"+typeof(10+"5"));  
+
+            document.write("<br>");  
+            document.write(10 * "5"); // number   
+            document.write("<br>");  
+            document.write("The type is :"+typeof(10*"5"));  
+            document.write("<br>");  
+
+            document.write(10 + 9.6);   
+            document.write("<br>");  
+            document.write("The type is:"+typeof(10+9.6));  
+            document.write("<br>"); 
+
+            document.write(10 * "hello"); // it will returns not a number(NaN)   
+            document.write("<br>");  
+            document.write("The type is:"+typeof(10*"hello"));  
+        </script>
+    </body>
+</html>
